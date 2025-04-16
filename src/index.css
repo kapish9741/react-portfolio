@@ -1,1 +1,21 @@
 @import "tailwindcss";
+.orbit-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    animation: orbit var(--duration, 20s) linear infinite;
+    transform: translateZ(0);
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateY(var(--radius, 50px)) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(var(--radius, 50px)) rotate(-360deg);
+    }
+  }
