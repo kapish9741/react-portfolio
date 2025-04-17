@@ -17,7 +17,7 @@ function App() {
         <section className='w-screen h-screen flex justify-center items-start'>
           <AboutMe />
         </section>
-        <section className='w-screen'>
+        <section className='w-screen my-20'>
           <Projects />
         </section>
       </main>
