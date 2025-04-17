@@ -32,11 +32,11 @@ const ContactUs = () => {
             <div className='flex w-[40vw] flex-col justify-center items-start gap-6 bg-neutral-900 border border-neutral-700 rounded-xl py-6 px-6'>
                 <form action="" className='w-full flex flex-col items-start justify-center gap-2'>
                         <label htmlFor="name" className='text-md text-neutral-100'>Your Name</label>
-                        <input type="text" name='name' placeholder='Kapish Rohilla' className='focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full' />
+                        <input type="text" name='name' placeholder='Kapish Rohilla' className='text-neutral-100 focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full' />
                         <label htmlFor="email" className='text-md text-neutral-100'>Your Email</label>
-                        <input type="text" name='email' placeholder='kapishrohilla@gmail.com' className='focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full' />
+                        <input type="text" name='email' placeholder='kapishrohilla@gmail.com' className='text-neutral-100 focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full' />
                         <label htmlFor="message" className='text-md text-neutral-100'>Your Message</label>
-                        <textarea name="message" id="message" placeholder='Tell me about your project...' className="focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full h-32 resize-none"/>
+                        <textarea name="message" id="message" placeholder='Tell me about your project...' className="text-neutral-100 focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full h-32 resize-none"/>
                         <button className='w-full px-2 py-1 bg-violet-500 border-none rounded-md text-md text-neutral-100 hover:bg-violet-600 cursor-pointer'>Send Message</button>
                 </form>
             </div>
