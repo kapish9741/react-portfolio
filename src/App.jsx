@@ -3,6 +3,7 @@ import Projects from './components/Projects';
 import Hero from './components/Hero';
 import NavBar from './components/NavBar';
 import AboutMe from './components/AboutMe';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </section>
         <section className='w-screen my-20'>
           <Projects />
+        </section>
+        <section className='w-screen h-screen flex justify-center items-center'>
+          <ContactUs />
         </section>
       </main>
     </>

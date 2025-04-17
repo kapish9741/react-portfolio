@@ -7,8 +7,8 @@ export default function Projects() {
   return (
     <>
       <div className='w-full h-full flex justify-center items-center flex-col gap-10 py-6'>
-        <h2 className='text-gray-100 text-4xl'>Projects</h2>
-        <p className='w-1/2 text-gray-400 text-xl text-center'>A selection of my recent work across web development, design, and interactive experiences.</p>
+        <h2 className='text-neutral-100 text-4xl'>Projects</h2>
+        <p className='w-1/2 text-neutral-400 text-xl text-center'>A selection of my recent work across web development, design, and interactive experiences.</p>
         <div className='w-full flex items-center justify-center gap-4 flex-row flex-wrap'>
           <Tilt glareEnable={true} glareMaxOpacity={0.2} scale={1.02} transitionSpeed={1200}>
             <div className='bg-neutral-900 border border-neutral-700 w-[40vw] rounded-2xl flex items-start justify-center flex-col gap-6 hover:border-violet-600 transition-colors duration-300 ease-in-out'>
@@ -45,6 +45,7 @@ export default function Projects() {
             </div>
           </Tilt>
         </div>
+        <button className='border border-neutral-700 text-neutral-100 px-6 py-2 hover:bg-violet-600 transition-colors duration-300 ease-in-out rounded-lg cursor-pointer'>View All Projects on GitHub</button>
       </div>
     </>
   )
