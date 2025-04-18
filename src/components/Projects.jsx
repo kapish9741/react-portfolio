@@ -31,17 +31,17 @@ export default function Projects() {
               </ul>
               
               <h3 className='text-gray-100 text-lg md:text-xl px-4 md:px-6'>Hirelyst</h3>
-              <p className='text-gray-400 text-sm md:text-md px-4 md:px-6'>Hirelyst is a sleek resume builder for creating professional, PDF-ready resumes with ease.</p>
+              <p className='text-gray-400 text-sm md:text-md px-4 md:px-6'>Hirelyst is a sleek resume builder for creating professional</p>
               
               <div className='flex flex-row items-center justify-start gap-4 md:gap-6 px-4 md:px-6 pb-6'>
-                <button className='border-none px-3 py-1 md:px-4 md:py-2 bg-neutral-800 hover:bg-violet-600 transition-colors duration-300 ease-in-out text-gray-100 rounded-lg cursor-pointer flex flex-row items-center justify-center gap-2'>
+                <a href='https://hirelyst.vercel.app/'><button className='border-none px-3 py-1 md:px-4 md:py-2 bg-neutral-800 hover:bg-violet-600 transition-colors duration-300 ease-in-out text-gray-100 rounded-lg cursor-pointer flex flex-row items-center justify-center gap-2'>
                   <i className="bi bi-code text-lg md:text-xl"></i>
                   <span className='text-sm md:text-base'>Live Preview</span>
-                </button>
-                <button className='border-none px-3 py-1 md:px-4 md:py-2 bg-neutral-800 hover:bg-violet-600 transition-colors duration-300 ease-in-out text-gray-100 rounded-lg cursor-pointer flex flex-row items-center justify-center gap-2'>
+                </button></a>
+                <a href='https://github.com/kapish9741/resume-builder'><button className='border-none px-3 py-1 md:px-4 md:py-2 bg-neutral-800 hover:bg-violet-600 transition-colors duration-300 ease-in-out text-gray-100 rounded-lg cursor-pointer flex flex-row items-center justify-center gap-2'>
                   <i className="bi bi-github text-lg md:text-xl"></i>
                   <span className='text-sm md:text-base'>Code</span>
-                </button>
+                </button></a>
               </div>
             </div>
           </Tilt>
@@ -66,17 +66,17 @@ export default function Projects() {
               </ul>
               
               <h3 className='text-gray-100 text-lg md:text-xl px-4 md:px-6'>Portfolio</h3>
-              <p className='text-gray-400 text-sm md:text-md px-4 md:px-6'>My personal portfolio website, showcasing my skills, projects, and experiences.</p>
+              <p className='text-gray-400 text-sm md:text-md px-4 md:px-6'>My personal portfolio website, showcasing my skills and projects.</p>
               
               <div className='flex flex-row items-center justify-start gap-4 md:gap-6 px-4 md:px-6 pb-6'>
-                <button className='border-none px-3 py-1 md:px-4 md:py-2 bg-neutral-800 hover:bg-violet-600 transition-colors duration-300 ease-in-out text-gray-100 rounded-lg cursor-pointer flex flex-row items-center justify-center gap-2'>
-                  <i className="bi bi-code text-lg md:text-xl"></i>
+              <a href='https://kapishrohilla.vercel.app/'><button className='border-none px-3 py-1 md:px-4 md:py-2 bg-neutral-800 hover:bg-violet-600 transition-colors duration-300 ease-in-out text-gray-100 rounded-lg cursor-pointer flex flex-row items-center justify-center gap-2'>
+
                   <span className='text-sm md:text-base'>Live Preview</span>
-                </button>
-                <button className='border-none px-3 py-1 md:px-4 md:py-2 bg-neutral-800 hover:bg-violet-600 transition-colors duration-300 ease-in-out text-gray-100 rounded-lg cursor-pointer flex flex-row items-center justify-center gap-2'>
+                </button></a>
+                <a href='https://github.com/kapish9741/react-portfolio'><button className='border-none px-3 py-1 md:px-4 md:py-2 bg-neutral-800 hover:bg-violet-600 transition-colors duration-300 ease-in-out text-gray-100 rounded-lg cursor-pointer flex flex-row items-center justify-center gap-2'>
                   <i className="bi bi-github text-lg md:text-xl"></i>
                   <span className='text-sm md:text-base'>Code</span>
-                </button>
+                </button></a>
               </div>
             </div>
           </Tilt>
