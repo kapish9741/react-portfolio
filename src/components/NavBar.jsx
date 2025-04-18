@@ -50,13 +50,13 @@ const NavBar = () => {
               <li className='cursor-pointer hover:text-violet-500 transition-colors'>Projects</li>
               <li className='cursor-pointer hover:text-violet-500 transition-colors'>Contact</li>
               <li className='flex gap-6 mt-2'>
-                <a href="#" className='cursor-pointer hover:text-violet-500 transition-colors' aria-label="GitHub Profile">
+                <a href="https://github.com/kapish9741" className='cursor-pointer hover:text-violet-500 transition-colors' aria-label="GitHub Profile">
                   <i className="bi bi-github text-xl"></i>
                 </a>
-                <a href="#" className='cursor-pointer hover:text-violet-500 transition-colors' aria-label="LinkedIn Profile">
+                <a href="https://www.linkedin.com/in/kapishrohilla/" className='cursor-pointer hover:text-violet-500 transition-colors' aria-label="LinkedIn Profile">
                   <i className="bi bi-linkedin text-xl"></i>
                 </a>
-                <a href="#" className='cursor-pointer hover:text-violet-500 transition-colors' aria-label="Email Contact">
+                <a href="kapishrohilla@gmail.com" className='cursor-pointer hover:text-violet-500 transition-colors' aria-label="Email Contact">
                   <i className="bi bi-envelope text-xl"></i>
                 </a>
               </li>

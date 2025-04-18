@@ -82,9 +82,9 @@ export default function Projects() {
           </Tilt>
         </div>
         
-        <button className='mt-4 border border-neutral-700 text-neutral-100 px-4 py-2 md:px-6 md:py-2 hover:bg-violet-600 transition-colors duration-300 ease-in-out rounded-lg cursor-pointer text-sm md:text-base'>
+        <a href='https://github.com/kapish9741'><button className='mt-4 border border-neutral-700 text-neutral-100 px-4 py-2 md:px-6 md:py-2 hover:bg-violet-600 transition-colors duration-300 ease-in-out rounded-lg cursor-pointer text-sm md:text-base'>
           View All Projects on GitHub
-        </button>
+        </button></a>
       </div>
     </>
   )

@@ -30,12 +30,12 @@ const ContactUs = () => {
                 <p className='text-neutral-100 text-md'>Find me on</p>
                 <ul className='flex items-center gap-5 justify-center'>
                     <li className='cursor-pointer py-1 px-2 rounded-full bg-neutral-800'>
-                        <a aria-label="GitHub profile">
+                        <a aria-label="GitHub profile" href='https://github.com/kapish9741'>
                             <i className="bi bi-github text-neutral-100 text-xl"></i>
                         </a>
                     </li>
                     <li className='cursor-pointer py-1 px-2 rounded-full bg-neutral-800'>
-                        <a aria-label="LinkedIn profile">
+                        <a aria-label="LinkedIn profile" href='https://www.linkedin.com/in/kapishrohilla/'>
                             <i className="bi bi-linkedin text-neutral-100 text-xl"></i>
                         </a>
                     </li>
