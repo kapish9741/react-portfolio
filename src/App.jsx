@@ -8,28 +8,28 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
-      <header className='fixed top-0 w-screen h-16 z-10 bg-transparent backdrop-blur-md'>
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
+      <header className="fixed top-0 w-full h-16 z-10 bg-transparent backdrop-blur-md">
         <NavBar />
       </header>
-      <main className='w-screen'>
-        <section className='w-screen h-screen pt-20'>
+      <main className="flex-grow w-full pt-16">
+        <section className="min-h-screen w-full py-8 md:py-12">
           <Hero />
         </section>
-        <section className='w-screen h-screen flex justify-center items-start'>
+        <section className="min-h-screen w-full py-12 flex justify-center items-start">
           <AboutMe />
         </section>
-        <section className='w-screen my-20'>
+        <section className="w-full py-12 md:py-20">
           <Projects />
         </section>
-        <section className='w-screen h-screen flex justify-center items-center'>
+        <section className="min-h-screen w-full py-12 flex justify-center items-center">
           <ContactUs />
         </section>
       </main>
-      <footer className='w-screen'>
+      <footer className="w-full">
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 
