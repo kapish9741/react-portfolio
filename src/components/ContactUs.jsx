@@ -1,6 +1,70 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
+    const form = useRef();
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      message: ''
+    });
+    const [status, setStatus] = useState({
+      submitting: false,
+      submitted: false,
+      error: false,
+      message: ''
+    });
+
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      setStatus({ ...status, submitting: true });
+
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+
+      emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+        .then((result) => {
+          console.log('Email sent successfully:', result.text);
+          setStatus({
+            submitting: false,
+            submitted: true,
+            error: false,
+            message: 'Message sent successfully! I\'ll get back to you soon.'
+          });
+          
+          setFormData({
+            name: '',
+            email: '',
+            message: ''
+          });
+          
+          setTimeout(() => {
+            setStatus({
+              submitting: false,
+              submitted: false,
+              error: false,
+              message: ''
+            });
+          }, 5000);
+        })
+        .catch((error) => {
+          console.error('Failed to send email:', error);
+          setStatus({
+            submitting: false,
+            submitted: false,
+            error: true,
+            message: 'Something went wrong. Please try again later.'
+          });
+        });
+    };
+
   return (
     <div className='w-full flex flex-col flex-wrap items-center justify-center gap-6 px-4 md:px-6 lg:px-8'>
         <h2 className='text-neutral-100 text-3xl md:text-4xl text-center'>Get In Touch</h2>
@@ -43,14 +107,21 @@ const ContactUs = () => {
             </div>
             
             <div className='w-full md:w-3/5 lg:w-2/5 flex flex-col justify-center items-start gap-6 bg-neutral-900 border border-neutral-700 rounded-xl py-6 px-4 md:px-6'>
-                <form action="" className='w-full flex flex-col items-start justify-center gap-2'>
+                <form 
+                  ref={form} 
+                  onSubmit={handleSubmit} 
+                  className='w-full flex flex-col items-start justify-center gap-2'
+                >
                     <label htmlFor="name" className='text-md text-neutral-100'>Your Name</label>
                     <input 
                         type="text" 
                         name='name' 
                         id="name"
                         placeholder='Kapish Rohilla' 
-                        className='text-neutral-100 focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full' 
+                        className='text-neutral-100 focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full'
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
                     />
                     
                     <label htmlFor="email" className='text-md text-neutral-100 mt-2'>Your Email</label>
@@ -59,7 +130,10 @@ const ContactUs = () => {
                         name='email' 
                         id="email"
                         placeholder='kapishrohilla@gmail.com' 
-                        className='text-neutral-100 focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full' 
+                        className='text-neutral-100 focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full'
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                     />
                     
                     <label htmlFor="message" className='text-md text-neutral-100 mt-2'>Your Message</label>
@@ -68,11 +142,24 @@ const ContactUs = () => {
                         id="message" 
                         placeholder='Tell me about your project...' 
                         className="text-neutral-100 focus:outline-none placeholder:text-neutral-500 border border-neutral-700 px-2 py-1 rounded-lg bg-neutral-800 w-full h-24 md:h-32 resize-none"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
                     />
                     
-                    <button className='w-full px-2 py-2 mt-2 bg-violet-500 border-none rounded-md text-md text-neutral-100 hover:bg-violet-600 cursor-pointer'>
-                        Send Message
+                    <button 
+                      type="submit"
+                      className='w-full px-2 py-2 mt-2 bg-violet-500 border-none rounded-md text-md text-neutral-100 hover:bg-violet-600 cursor-pointer disabled:bg-violet-800 disabled:cursor-not-allowed'
+                      disabled={status.submitting}
+                    >
+                        {status.submitting ? 'Sending...' : 'Send Message'}
                     </button>
+                    
+                    {status.message && (
+                      <div className={`w-full mt-4 p-3 rounded-md text-center ${status.error ? 'bg-red-900/50 text-red-200' : 'bg-green-900/50 text-green-200'}`}>
+                        {status.message}
+                      </div>
+                    )}
                 </form>
             </div>
         </div>
